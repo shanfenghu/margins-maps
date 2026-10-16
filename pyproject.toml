@@ -6,6 +6,8 @@ build-backend = "setuptools.build_meta"
 name = "margins-maps"
 version = "0.1.0"
 description = "Certified spatial reaggregation over overlapping supports"
+readme = "README.md"
+license = {file = "LICENSE"}
 requires-python = ">=3.11"
 dependencies = [
   "matplotlib==3.10.7",
@@ -18,7 +20,11 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest==8.4.2"]
+dev = ["black==24.10.0", "flake8==7.1.1", "pytest==8.4.2"]
+
+[project.scripts]
+margins-maps = "margins_maps.workflow:main"
+margins-maps-check = "margins_maps.inputs:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
@@ -26,3 +32,4 @@ where = ["src"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q"
+pythonpath = ["src"]

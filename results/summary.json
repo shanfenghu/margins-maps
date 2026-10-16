@@ -1,0 +1,72 @@
+{
+  "counties": 8,
+  "hydrologic_units": 13,
+  "support_edges": 30,
+  "cycle_rank": 10,
+  "feasible_measures": 93,
+  "query_predicates": 44,
+  "query_instances": 4092,
+  "exact_instances": 2273,
+  "ambiguous_fraction": 0.4445259042033236,
+  "ambiguous_median_relative_width": 0.03458376641783994,
+  "median_relative_width": 0.0,
+  "maximum_relative_width": 0.3333333333333333,
+  "support_sensitivity": {
+    "expanded": {
+      "pairs": 1302,
+      "exactness_changes": 54,
+      "maximum_relative_width_change": 0.13333333333333341
+    },
+    "restricted": {
+      "pairs": 1274,
+      "exactness_changes": 9,
+      "maximum_relative_width_change": 0.08
+    }
+  },
+  "verification_failures": 0,
+  "witness": {
+    "query": "rectangle-0.65-0.65",
+    "lower": 955.4799999999999,
+    "upper": 1057.2099999999998
+  },
+  "agricultural_validation": {
+    "AgCounties": 67,
+    "AgHucs": 11,
+    "AgEdges": 159,
+    "AgCycleRank": 81,
+    "AgQueries": 252,
+    "AgDerivedQueries": 173,
+    "AgControlQueries": 79,
+    "AgAmbiguousPct": "96.0",
+    "AgMedianWidth": "1.55",
+    "AgMaxWidth": "9.7",
+    "AgAreaOutside": 12,
+    "AgCellAreaOutside": 0,
+    "AgAreaResidual": "359.4",
+    "AgAuditFailures": 0,
+    "AgComplementMaxError": "0.0e+00",
+    "AgDisclosureRank": 81,
+    "AgDisclosureChecks": 578,
+    "AgDisclosureFailures": 0,
+    "AgDisclosureWitnessWorlds": 162,
+    "AgDisclosureOracleWorlds": 162,
+    "AgBasisChecks": 175,
+    "AgBasisFailures": 0,
+    "AgFlowFeasibilityChecks": 1,
+    "AgFlowEndpointChecks": 504,
+    "AgFlowFailures": 0,
+    "AgFlowMaxError": "0.0e+00",
+    "AgDualChecks": 504,
+    "AgDualFailures": 0,
+    "AgDualMaxError": "0.0e+00",
+    "AgMutationChecks": 3528,
+    "AgMutationAcceptances": 0,
+    "AgOutside": 4017,
+    "AgUniformQueries": 16384,
+    "AgUniformExact": 0,
+    "AgUniformAmbiguousPct": "100.0",
+    "AgUniformOracleQueries": 256,
+    "AgUniformOracleFailures": 0,
+    "AgUniformMedianWidth": "50.15"
+  }
+}

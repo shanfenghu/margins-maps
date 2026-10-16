@@ -1,17 +1,24 @@
 # Public inputs
 
-The evaluation expects two local directories under `data/raw/`.
+All inputs required by the workflow are included under `data/input/`. They are
+small, immutable extracts from United States government sources. The expected
+SHA-256 digests live in `margins_maps.inputs`; run `make check-data` before a
+full evaluation.
 
-`usgs/` contains Connecticut county and hydrologic-unit boundaries and the
-associated 1985 water-use totals distributed by the US Geological Survey.
-Expected names are `ct85co.txt`, `ct85w8.txt`, `ct_counties.geojson`,
-`ct_counties_2010.geojson`, and `ct_huc8.geojson`.
+## Water-use data
 
-`usda/` contains 2022 Census of Agriculture totals and public boundary files.
-Expected names are `NASSAgCensusDownload2022_175maps_Links.xlsx`,
-`county_farms_2022.csv`, `huc6_farms_2022.csv`,
-`counties_ne_ny_2020.geojson.gz`, and `huc6_01.geojson.gz`.
+`input/usgs/` contains Connecticut county totals, hydrologic-unit totals, 2010
+county boundaries, and Watershed Boundary Dataset geometries. The historical
+totals originate from the [USGS 1985 water-use release](https://water.usgs.gov/watuse/data/1985/index.html).
+The geometries originate from [Census TIGERweb](https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Census2010/MapServer)
+and the [USGS Watershed Boundary Dataset](https://www.usgs.gov/national-hydrography/watershed-boundary-dataset).
 
-These inputs are excluded from version control because they are redistributed
-by their source agencies and can be downloaded independently. The workflow
-checks identifiers, balance conditions, and geometry validity before analysis.
+## Agricultural data
+
+`input/usda/` contains 2022 farm counts on county and HUC6 supports, plus the
+corresponding public boundaries. The counts originate from the
+[USDA Census of Agriculture](https://www.nass.usda.gov/AgCensus/) county and
+watershed resources.
+
+The workflow validates file digests first, then checks identifiers, nonnegative
+values, marginal balance, and geometry validity during evaluation.

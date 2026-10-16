@@ -1,6 +1,6 @@
 import numpy as np
 
-from margins_maps import incidence, incidence_apply, solve_bounds
+from margins_maps.workflow import incidence, incidence_apply, solve_bounds
 
 
 def test_incidence_matches_direct_application():
@@ -15,9 +15,7 @@ def test_bounds_recover_two_by_two_extremes():
     matrix = incidence(2, 2, edges)
     margins = np.array([3.0, 3.0, 4.0, 2.0])
     selector = np.array([1.0, 0.0, 0.0, 0.0])
-    lower, upper, low_world, high_world = solve_bounds(
-        matrix, margins, selector
-    )
+    lower, upper, low_world, high_world = solve_bounds(matrix, margins, selector)
     assert (lower, upper) == (1.0, 3.0)
     assert np.allclose(matrix @ low_world, margins)
     assert np.allclose(matrix @ high_world, margins)
