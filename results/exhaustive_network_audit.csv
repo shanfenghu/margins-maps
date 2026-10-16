@@ -1,0 +1,2 @@
+cases,enumerated_worlds,endpoint_failures,exactness_failures,integrality_failures,dual_failures,max_dual_error,signature_transfer_checks,signature_transfer_failures,infeasible_cases,infeasible_failures
+512,686,0,0,0,0,0.0,2048,0,256,0

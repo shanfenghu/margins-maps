@@ -1,0 +1,27 @@
+audit,trials,failures
+cycle exactness versus optimized width,4092,0
+endpoint primal and objective replay,8184,0
+native primal-dual endpoint certificates,8184,0
+corrupted native certificate rejection,57288,0
+infeasible neighbor-cut witness,15,0
+query-complement endpoint identity,8184,0
+enumerated integer-fiber endpoints,512,0
+enumerated integer-fiber exactness,512,0
+integral endpoint identity,1024,0
+primal-dual endpoint certificate,1024,0
+signature-equivalent query transfer,2048,0
+capacity-induced infeasibility,256,0
+minimum native workload-disclosure basis,6402,0
+combinatorial versus numerical cycle basis,4278,0
+independent integer-flow feasibility and endpoints,8292,0
+fixed-predicate support interval containment,2576,0
+all-breakpoint support interval containment,15946,0
+all-breakpoint exact-answer persistence,12361,0
+leave-one-overlap-edge interval containment,31682,0
+edge-deletion feasibility iff zero lower endpoint,2790,0
+two-edge deletion iff zero joint lower endpoint,40455,0
+two-edge deletion neighbor-cut witness,14301,0
+all-orders removable-edge interaction classification,93,0
+all-orders removable-edge cut witness,64,0
+leave-one-overlap-edge exact-answer persistence,17929,0
+binary-query census versus direct enumeration,88862,0

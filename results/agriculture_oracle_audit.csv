@@ -1,0 +1,13 @@
+audit,trials,failures
+cycle exactness versus optimized width,252,0
+endpoint balance replay,504,0
+integral endpoint witness,504,0
+published-margin negative controls,79,0
+query-complement endpoint identity,346,0
+minimum workload-disclosure basis,578,0
+combinatorial versus numerical cycle basis,175,0
+independent integer-flow feasibility and endpoints,505,0
+native primal-dual endpoint certificates,504,0
+corrupted native certificate rejection,3528,0
+uniform binary-query panel complement symmetry,16384,0
+uniform binary-query panel endpoint replay,768,0

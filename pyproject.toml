@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "margins-maps"
+version = "0.1.0"
+description = "Certified spatial reaggregation over overlapping supports"
+requires-python = ">=3.11"
+dependencies = [
+  "matplotlib==3.10.7",
+  "numpy==2.3.4",
+  "openpyxl==3.1.5",
+  "pandas==2.3.3",
+  "pyproj==3.7.2",
+  "scipy==1.16.3",
+  "shapely==2.1.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.4.2"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
