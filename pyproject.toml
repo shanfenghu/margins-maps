@@ -25,6 +25,7 @@ dev = ["black==24.10.0", "flake8==7.1.1", "pytest==8.4.2"]
 [project.scripts]
 margins-maps = "margins_maps.workflow:main"
 margins-maps-check = "margins_maps.inputs:main"
+margins-maps-verify = "margins_maps.verification:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

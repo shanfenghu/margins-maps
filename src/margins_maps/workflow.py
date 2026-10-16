@@ -25,6 +25,7 @@ from shapely.geometry import shape
 from shapely.ops import transform
 
 from .inputs import PROJECT_ROOT, validate_inputs
+from .verification import require_zero_failures
 
 
 ROOT = PROJECT_ROOT
@@ -2657,6 +2658,10 @@ def main() -> None:
     }
     (OUT / "summary.json").write_text(json.dumps(summary, indent=2) + "\n")
     print(json.dumps(summary, indent=2))
+    require_zero_failures(
+        audit_rows
+        + pd.read_csv(OUT / "agriculture_oracle_audit.csv").to_dict("records")
+    )
 
 
 if __name__ == "__main__":
